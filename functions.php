@@ -1,6 +1,6 @@
 <?php
 
-define( 'ZERO_VERSION_NUMBER', '0.0.3' );
+define( 'ZERO_VERSION_NUMBER', '0.0.2' );
 
 /**
  * Loads the default theme supported features. Subthemes can remove them with remove_theme_support
@@ -10,28 +10,25 @@ add_action( 'after_setup_theme', 'zero_setup', 1 ); // Run as soon as possible
 function zero_setup() {
   // This theme uses post thumbnails
   add_theme_support( 'post-thumbnails' );
-
+  
   // Add default posts and comments RSS feed links to head
   add_theme_support( 'automatic-feed-links' );
   
   // Configure the post thumbnail sizes
   add_theme_support( 'zero-post-thumbnails' );
   
+  // Add the Modernizr library
+  add_theme_support( 'zero-modernizr' );
+  
+  // Use the Modernizr library as the script loader
+  add_theme_support( 'zero-modernizr-loader' );
+  
   // Adds the Zero base set of CSS files (LES): reset.less, editor.less, and prose.less (requires zero-less theme support)
   add_theme_support( 'zero-css-base' );
-
-  // Adds support for LESS to be used for the CSS files
-  add_theme_support( 'zero-less' );
   
   // Configures the WYSIWYG editor to use the styles in prose.less along with reset.less and editor.less
   add_theme_support( 'zero-css-editor' );
-  
-  // Insert the IE HTML5 shiv
-  add_theme_support( 'zero-html5-shiv' );
-  
-  // Loads the scripts in an async fashion while still running them in order
-  add_theme_support( 'zero-async-script-load' );
-  
+    
   // Use the thread comments script to move the comment field below where replying
   add_theme_support( 'zero-thread-comments-script' );
   
@@ -72,19 +69,20 @@ function zero_setup() {
   add_theme_support( 'zero-page-title' );
   
   // Will set images/apple-touch-startup-image.png as the web-app start up image (320x460px)
-  // add_theme_support( 'zero-apple-touch-startup-image' );
+  add_theme_support( 'zero-apple-touch-startup-image' );
   
   // Add the nav element to acceptable elements for the menu
   add_theme_support( 'zero-nav-menu-container' );
   
-  // Adds the Javascript part of formalize.css to add placeholder and autofocus to older browsers. (The CSS file, formalize.css, ala css/formalize.less, is included as part of zero-base-css)
-  add_theme_support( 'zero-formalize' );
   
   // Give you helper functions to work with the nav menus 
   add_theme_support( 'zero-nav-menu-helpers' );
   
   // Give you helper functions to work with posts 
   add_theme_support( 'zero-posts-helpers' );
+
+  // Easy Ajax callbacks
+  add_theme_support( 'zero-themeajax' );
 
   // Make theme available for translation
   // Translations can be filed in the /languages/ directory
@@ -102,16 +100,13 @@ function zero_setup() {
 /**
  * Start loading up features
  */
-add_action( 'init', 'zero_load_features' );
+add_action( 'after_setup_theme', 'zero_load_features' );
 function zero_load_features() {
 	$path = dirname(__FILE__).'/features/';
 	
 	$features = array(
 	  'zero-css-base',
-	  'zero-less',
 		'zero-css-editor',
-		'zero-html5-shiv',
-		'zero-async-script-load',
 		'zero-thread-comments-script',
 		'zero-menu-class-names',
 		'zero-favicon',
@@ -120,16 +115,18 @@ function zero_load_features() {
 	  'zero-pager',
 	  'zero-nav-menus',
 	  'zero-widget-areas',
-		'zero-remove-gallery-css',
+	  'zero-remove-gallery-css',
 	  'zero-post-thumbnails',
 	  'zero-comments',
 	  'zero-options-page',
 	  'zero-page-title',
 	  'zero-apple-touch-startup-image',
 	  'zero-nav-menu-container',
-	  'zero-formalize',
 	  'zero-nav-menu-helpers',
 	  'zero-posts-helpers',
+	  'zero-modernizr-loader',
+	  'zero-modernizr',
+    'zero_themeajax',
 	);
 	
 	foreach( $features as $feature ) {
