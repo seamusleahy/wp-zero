@@ -1,6 +1,5 @@
 ## General ##
 
-1. Way to modify the <title> format
 2. Clean of comments
   2.1 Using more HTML5 elements
   2.2 Split into templates or construct all the data for a single template to handle

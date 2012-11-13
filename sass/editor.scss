@@ -1,5 +1,13 @@
+@import "compass/css3";
+
+@import "core/reset";
+@import "core/color";
+@import "core/type";
+@import "core/dimension";
+
+@import "objects/prose";
+
 body.mcecontentbody {
   padding: 0.6em;
   margin: 0;
-  font: normal normal normal 15px/20px/ sans-serif;
 }

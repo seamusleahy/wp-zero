@@ -1,4 +1,11 @@
-<!DOCTYPE html>
+<?php
+/**
+ * The start of the page outout.
+ *
+ * @package WordPress
+ * @subpackage ZEROTHEME
+ */
+?><!DOCTYPE html>
 <!--[if IEMobile 7 ]>
 	<html class="no-js iem7"">
 <![endif]-->
@@ -20,28 +27,28 @@
 <!--<![endif]-->
 
 <head>
-<meta charset="<?php bloginfo( 'charset' ); ?>" />
-<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-<meta http-equiv="cleartype" content="on">
+	<meta charset="<?php bloginfo( 'charset' ); ?>" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta http-equiv="cleartype" content="on">
 
-<title><?php if(function_exists('zero_wp_title')) {
-	zero_wp_title(); 
-} else {
-  wp_title( '|' );
-  bloginfo('name');
-}?></title>
+	<title><?php if(function_exists('zero_wp_title')) {
+		zero_wp_title(); 
+	} else {
+		wp_title( '|' );
+		bloginfo('name');
+	}?></title>
 
-<?php // TODO: move viewport into a feature ?>
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<?php // TODO: move viewport into a feature ?>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-<?php // TODO: Add SEO tags? ?>	
+	<?php // TODO: Add SEO tags? ?>	
 
-	
-<link rel="profile" href="http://gmpg.org/xfn/11" />
-<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
-<?php
-	wp_head();
-?>
+		
+	<link rel="profile" href="http://gmpg.org/xfn/11" />
+	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
+	<?php
+		wp_head();
+	?>
 </head>
 
 <body <?php body_class(); ?>>

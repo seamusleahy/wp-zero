@@ -1,6 +1,113 @@
-/* line 1, ../assets/sass/editor.scss */
+/**
+ * Eric Meyer's Reset CSS v2.0 (http://meyerweb.com/eric/tools/css/reset/)
+ * http://cssreset.com
+ */
+/* line 17, ../sass/core/_reset.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+/* line 27, ../sass/core/_reset.scss */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+/* line 30, ../sass/core/_reset.scss */
+body {
+  line-height: 1;
+}
+
+/* line 33, ../sass/core/_reset.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 36, ../sass/core/_reset.scss */
+blockquote, q {
+  quotes: none;
+}
+
+/* line 40, ../sass/core/_reset.scss */
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+/* line 44, ../sass/core/_reset.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 5, ../sass/core/_color.scss */
+body {
+  color: white;
+  background-color: #222222;
+}
+
+/* line 10, ../sass/core/_color.scss */
+a {
+  color: #00bff3;
+}
+
+/* line 4, ../sass/core/_type.scss */
+body {
+  font-family: "Arial", sans-serif;
+  font-size: 16px;
+}
+
+/* line 2, ../sass/objects/_prose.scss */
+.prose p, .prose ol, .prose ul, .prose dl, .prose blockquote {
+  margin: 1em 0;
+}
+/* line 6, ../sass/objects/_prose.scss */
+.prose ol, .prose ul {
+  overflow: hidden;
+}
+/* line 9, ../sass/objects/_prose.scss */
+.prose ol li, .prose ul li {
+  display: list-item;
+  margin-left: 1.5em;
+}
+/* line 15, ../sass/objects/_prose.scss */
+.prose ul li {
+  list-style-type: disc;
+}
+/* line 19, ../sass/objects/_prose.scss */
+.prose ol li {
+  list-style-type: decimal;
+}
+/* line 23, ../sass/objects/_prose.scss */
+.prose strong {
+  font-weight: bold;
+}
+/* line 27, ../sass/objects/_prose.scss */
+.prose em {
+  font-style: italic;
+}
+
+/* line 10, ../sass/editor.scss */
 body.mcecontentbody {
   padding: 0.6em;
   margin: 0;
-  font: normal normal normal 15px/20px/sans-serif;
 }

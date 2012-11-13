@@ -1,10 +1,11 @@
 <?php
 /**
- * 
+ * Generate better page titles
  */
 function zero_wp_title($separator = '|', $echo=true) {
 	global $page, $paged;
 	
+	// The various parts that can go in the title
 	$title  = trim(wp_title( '', false));
 	$site_name = get_bloginfo('name');
 	$page_num = max( $paged, $page );
@@ -13,7 +14,7 @@ function zero_wp_title($separator = '|', $echo=true) {
 	$formatted_parts = array();
 	
 	// Display the site name with description on the homepage
-	if(is_home() || is_front_page()){ 
+	if(is_front_page()){ 
 		$formatted_parts['site_name'] = $site_name;
 	  if(!empty($site_description)) {
 	  	$formatted_parts['site_description'] = $site_description;
@@ -27,7 +28,7 @@ function zero_wp_title($separator = '|', $echo=true) {
 	
   // Add the page number
 	if($page_num > 1) {
-		$formatted_parts['page_num'] = sprintf( __( 'Page %s', 'zero' ), $page_num );
+		$formatted_parts['page_num'] = sprintf( __( 'Page %s', 'ZEROTHEME' ), $page_num );
 	}
 	
 	// Call filter zero_wp_title for others to modify
