@@ -11,8 +11,8 @@ function zero_login_theme_login_head() {
   $styles = new WP_Styles();
   
   // TODO: create a search order for file extensions for stylesheets
-  if( file_exists( get_stylesheet_directory().'/css/login.less' ) ) {
-    $styles->add( 'custom-login', get_bloginfo( 'stylesheet_directory' ).'/css/login.less' );
+  if( file_exists( get_stylesheet_directory().'/css/login.css' ) ) {
+    $styles->add( 'custom-login', get_bloginfo( 'stylesheet_directory' ).'/css/login.css' );
     $styles->enqueue( 'custom-login' );
   } else if( file_exists( get_stylesheet_directory().'/css/login.css' ) ) {
     $styles->add( 'custom-login', get_bloginfo( 'stylesheet_directory' ).'/css/login.css' );

@@ -1,4 +1,7 @@
 <?php
+/**
+ * Allow for easy AJAX templates
+ */
 function zero_themeajax_print_settings() {
   echo '<script>';
   echo 'window.themeSettings = ';

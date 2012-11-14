@@ -3,7 +3,7 @@
 2. Clean of comments
   2.1 Using more HTML5 elements
   2.2 Split into templates or construct all the data for a single template to handle
-
+3. Add multiple sizes for apple-touch-startup-image http://stackoverflow.com/questions/4687698/mulitple-apple-touch-startup-image-resolutions-for-ios-web-app-esp-for-ipad
 
 
 ## Options ##

@@ -17,16 +17,7 @@ function zero_setup() {
 	
 	// Add default posts and comments RSS feed links to head
 	add_theme_support( 'automatic-feed-links' );
-	
-	// Configure the post thumbnail sizes
-	add_theme_support( 'zero-post-thumbnails' );
-	
-	// Add the Modernizr library
-	add_theme_support( 'zero-modernizr' );
-	
-	// Use the Modernizr library as the script loader
-	add_theme_support( 'zero-modernizr-loader' );
-		
+			
 	// Configures the WYSIWYG editor to use the styles in prose.less along with reset.less and editor.less
 	add_theme_support( 'zero-css-editor' );
 		
@@ -50,9 +41,6 @@ function zero_setup() {
 		 
 	// Adds the function zero_paginate_index_links() which wraps WP's paginate_links to work for index pages instead of just paginated posts
 	add_theme_support( 'zero-pager' );
-
-	// Handles the registration of menus
-	add_theme_support( 'zero-nav-menus' );
 	
 	// Removes the embed style element for the gallery printed with shortcode
 	add_theme_support( 'zero-remove-gallery-css' );
@@ -111,10 +99,8 @@ function zero_load_features() {
 		'zero-apple-touch-icon',
 		'zero-login-theme',
 		'zero-pager',
-		'zero-nav-menus',
 		'zero-widget-areas',
 		'zero-remove-gallery-css',
-		'zero-post-thumbnails',
 		'zero-comments',
 		'zero-options-page',
 		'zero-page-title',
@@ -122,8 +108,6 @@ function zero_load_features() {
 		'zero-nav-menu-container',
 		'zero-nav-menu-helpers',
 		'zero-posts-helpers',
-		'zero-modernizr-loader',
-		'zero-modernizr',
 		'zero_themeajax',
 	);
 	
