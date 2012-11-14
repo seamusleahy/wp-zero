@@ -34,14 +34,35 @@ function ZEROTHEME_setup() {
 
 }
 
+
+
+/**
+ * Enqueue theme stylesheet files
+ *
+ * http://codex.wordpress.org/Function_Reference/wp_enqueue_style
+ */
+add_action('wp_enqueue_scripts', 'ZEROTHEME_enqueue_styles');
+function ZEROTHEME_enqueue_styles() {
+  // Don't load our styles in the admin section
+  if( !is_admin() ) {
+    wp_register_style( 'print', zero_get_overridden_file('/css/print.css'), array(), THEME_VERSION_NUMBER, 'print' );
+    wp_enqueue_style( 'print' );
+
+    wp_register_style( 'screen', zero_get_overridden_file('/css/screen.css'), array(), THEME_VERSION_NUMBER, 'screen' );
+    wp_enqueue_style( 'screen' );
+  }
+}  
+
+
 /**
  * Enqueue theme Javascript files
+ *
+ * http://codex.wordpress.org/Function_Reference/wp_enqueue_script
  */
 add_action('wp_enqueue_scripts', 'ZEROTHEME_enqueue_scripts');
 function ZEROTHEME_enqueue_scripts() {
   // Don't load our scripts in the admin section
   if( !is_admin() ) {
-    // http://codex.wordpress.org/Function_Reference/wp_enqueue_script
     // wp_register_script( 'plugins', get_template_directory_uri().'/js/plugins.js', array('jquery'), THEME_VERSION_NUMBER);
     // wp_enqueue_script( 'plugins' );
     // wp_register_script( 'script', get_template_directory_uri().'/js/script.js', array('jquery', 'script'), THEME_VERSION_NUMBER);

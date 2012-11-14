@@ -5,10 +5,10 @@
 add_action( 'wp_head', 'zero_apple_touch_icon_wp_head' );
 function zero_apple_touch_icon_wp_head( ) {
 	// the path to the images
-  $path = get_stylesheet_directory().'/images/';
+  $path = get_stylesheet_directory().'/img/';
   
   // try the cache first
-  $icons = wp_cache_get( 'apple-touch-icons', 'zero' );
+  $icons = wp_cache_get( 'apple-touch-icons', 'ZEROTHEME' );
   
   // If not cached or in debug mode, then go ahead of load them up
   if($icons == false || (defined('WP_DEBUG') && WP_DEBUG)) {
@@ -23,7 +23,7 @@ function zero_apple_touch_icon_wp_head( ) {
 					if( is_file($path.$file) && preg_match('#^apple-touch-icon(-(?P<x>\d+)x(?P<y>\d+))?(?P<precomposed>-precomposed)?\.png$#', $file, $matches) !== 0 ) {
 						
 						$attrs = array(
-						  'href' => get_bloginfo( 'stylesheet_directory' ).'/images/'.$file,
+						  'href' => get_bloginfo( 'stylesheet_directory' ).'/img/'.$file,
 						  'rel' => 'apple-touch-icon',
 						);
 						

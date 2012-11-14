@@ -26,10 +26,7 @@ function zero_setup() {
 	
 	// Use the Modernizr library as the script loader
 	add_theme_support( 'zero-modernizr-loader' );
-	
-	// Adds the Zero base set of CSS files (LES): reset.less, editor.less, and prose.less (requires zero-less theme support)
-	add_theme_support( 'zero-css-base' );
-	
+		
 	// Configures the WYSIWYG editor to use the styles in prose.less along with reset.less and editor.less
 	add_theme_support( 'zero-css-editor' );
 		
