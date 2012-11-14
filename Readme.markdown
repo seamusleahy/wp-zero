@@ -7,7 +7,7 @@
 
 # Advance Features (they can be disabled): #
 
-1. Apple touch icons: Simple place your icons in your sub-theme's image directory and name them apple-touch-icon[-<X>x<Y>][-precomposed].png
+1. Apple touch icons: Simple place your icons in your sub-theme's image directory and name them ```apple-touch-icon[-<X>x<Y>][-precomposed].png```. (Use the App icon template to assist: http://appicontemplate.com/)
 
 2. Favicon: Simple place your favicon.ico in your sub-theme's image directory.
 
@@ -51,6 +51,45 @@ gets pulled in to the editor for styling the output.
 You should not need to modify the footer.php or header.php templates because they only handle the doctype, head element, body element, and html element. 
 To modify the start and end of the page, you can over-ride the body-header.php and body-footer.php templates.
 
+# Helpers #
+
+## Load templates while passing variables ##
+
+It works like the WordPress core ```load_template``` function but this takes an additional parameter of custom variables.
+
+```php
+<?php
+zero_load_template( locate_template( 'custom-template.php' ),  array( 'foo' => 'The value for the $foo var in the template' ) );
+?>
+```
 
 
+## Load a template part with multiple specialized names  ##
+
+It works like the WordPress core ```get_template_part``` function but this takes an array for the ```$name``` parameter.
+
+```php
+<?php
+zero_get_template_part( 'loop', array( 'single-event', 'event', 'single' ) );
+?>
+```
+
+## Slugify text ##
+
+1. ```$text``` string - the text to slugify
+2. ```$options``` optional array - ```force_lowercase``` boolean to lowercase the text (defaults to ```true```), ```separated_character``` is a string to separate words (defaults to ```'-'```), ```accepted_characters``` is the regex to match words (defaults to ```'\w'```)
+
+```php
+<?php
+$slug = zero_slugify( 'Magazine Name' );
+echo $slug;
+// magazine-name
+?>
+```
+
+## Format array as HTML attributes ##
+
+```php
+<div <?php echo zero_get_formatted_attributes( array( 'class' => array('first', 'push1', 'span3'), 'id' => 'album', 'data-name' => 'french' ) ); ?>>
+```
 
