@@ -80,7 +80,7 @@ Make your login page look like it is part of your site instead of WordPress. It 
 
 
 
-## Helpers ##
+## Helper functions ##
 
 ### Pagination for posts ###
 Add ```zero_paginate_index_links``` function that wraps paginate_links to work to create pagers for index and archive pages.
