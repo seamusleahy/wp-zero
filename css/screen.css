@@ -112,3 +112,85 @@ body {
 .prose em {
   font-style: italic;
 }
+/* line 34, ../sass/objects/_prose.scss */
+.prose .alignnone {
+  margin: 5px 20px 20px 0;
+}
+/* line 39, ../sass/objects/_prose.scss */
+.prose .aligncenter,
+.prose div.aligncenter {
+  display: block;
+  margin: 5px auto 5px auto;
+}
+/* line 44, ../sass/objects/_prose.scss */
+.prose .alignright {
+  float: right;
+  margin: 5px 0 20px 20px;
+}
+/* line 49, ../sass/objects/_prose.scss */
+.prose .alignleft {
+  float: left;
+  margin: 5px 20px 20px 0;
+}
+/* line 54, ../sass/objects/_prose.scss */
+.prose .aligncenter {
+  display: block;
+  margin: 5px auto 5px auto;
+}
+/* line 59, ../sass/objects/_prose.scss */
+.prose a img.alignright {
+  float: right;
+  margin: 5px 0 20px 20px;
+}
+/* line 64, ../sass/objects/_prose.scss */
+.prose a img.alignnone {
+  margin: 5px 20px 20px 0;
+}
+/* line 68, ../sass/objects/_prose.scss */
+.prose a img.alignleft {
+  float: left;
+  margin: 5px 20px 20px 0;
+}
+/* line 73, ../sass/objects/_prose.scss */
+.prose a img.aligncenter {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* line 79, ../sass/objects/_prose.scss */
+.prose .wp-caption {
+  background: #fff;
+  border: 1px solid #f0f0f0;
+  max-width: 96%;
+  /* Image does not overflow the content area */
+  padding: 5px 3px 10px;
+  text-align: center;
+}
+/* line 87, ../sass/objects/_prose.scss */
+.prose .wp-caption.alignnone {
+  margin: 5px 20px 20px 0;
+}
+/* line 91, ../sass/objects/_prose.scss */
+.prose .wp-caption.alignleft {
+  margin: 5px 20px 20px 0;
+}
+/* line 95, ../sass/objects/_prose.scss */
+.prose .wp-caption.alignright {
+  margin: 5px 0 20px 20px;
+}
+/* line 99, ../sass/objects/_prose.scss */
+.prose .wp-caption img {
+  border: 0 none;
+  height: auto;
+  margin: 0;
+  max-width: 98.5%;
+  padding: 0;
+  width: auto;
+}
+/* line 108, ../sass/objects/_prose.scss */
+.prose .wp-caption p.wp-caption-text {
+  font-size: 11px;
+  line-height: 17px;
+  margin: 0;
+  padding: 0 4px 5px;
+}
