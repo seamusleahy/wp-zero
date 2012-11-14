@@ -38,12 +38,8 @@
 		bloginfo('name');
 	}?></title>
 
-	<?php // TODO: move viewport into a feature ?>
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	
 
-	<?php // TODO: Add SEO tags? ?>	
-
-		
 	<link rel="profile" href="http://gmpg.org/xfn/11" />
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
 	<?php

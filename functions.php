@@ -85,4 +85,29 @@ function ZEROTHEME_enqueue_scripts() {
     // wp_enqueue_script( 'script' );
   }
 }    
- 
+
+
+/**
+ * Custom elements in the head for iPhone and iPad configuration.
+ */
+add_action('wp_head', 'ZEROTHEME_head');
+function ZEROTHEME_head() {
+  // http://justinavery.me/blog/developing-ipad-web-application/
+  ?>
+
+  <?php
+  // Sets the page width to that of the device width instead of 1020px and zooming out.
+  // https://developer.mozilla.org/en-US/docs/Mobile/Viewport_meta_tag ?>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <?php
+  // Add the following code to make the iPad web application go full screen.
+  ?>
+  <?php // <meta name="apple-mobile-web-app-capable" content="yes" > ?>
+
+  <?php 
+  // The color of the Apple status bar when in full screen (default, black, black-translucent)
+  ?>
+  <?php //<meta name="apple-mobile-web-app-status-bar-style" content="black"> ?>
+  <?php
+}
