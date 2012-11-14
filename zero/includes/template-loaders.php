@@ -17,30 +17,6 @@ function zero_load_template( $_template_file,  $_vars = array(), $require_once =
 }
 
 
-/**
- * This checks if a file in the theme has been overridden in a sub-theme. 
- * If so, then it returns the path to the overridden, else the file in the zero theme.
- *
- * @param $path string 
- *
- * @return string
- */
-function zero_get_overridden_file( $path ) {
-  $subtheme = get_stylesheet_directory();
-  $parenttheme = get_template_directory();
-  
-  
-  if( file_exists( $subtheme.$path ) ) {
-  
-    return get_bloginfo( 'stylesheet_directory' ).$path;
-  }
-  
-  if( file_exists( $parenttheme.$path ) ) {
-    return get_bloginfo( 'template_directory' ).$path;
-  }
-  
-  return false;
-}
 
 
 /**
@@ -61,5 +37,5 @@ function zero_get_template_part( $slug, $name=null) {
 	
 	$templates[] = $slug . '.php';
 	
-	locate_template($templates, true, false);
+	return locate_template($templates, true, false);
 }
