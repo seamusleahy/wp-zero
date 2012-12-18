@@ -89,7 +89,7 @@ function ZEROTHEME_enqueue_scripts() {
 		// wp_enqueue_script( 'plugins' );
 
 		// The custom script kickoff for your theme. It is placed in the footer, remove the `true` parameter to place in head.
-		wp_register_script( 'script', get_template_directory_uri().'/js/script.js', array( 'jquery', 'script' ), ZEROTHEME_VERSION_NUMBER, true );
+		wp_register_script( 'script', get_template_directory_uri().'/js/script.js', array( 'jquery' ), ZEROTHEME_VERSION_NUMBER, true );
 		wp_enqueue_script( 'script' );
 	}
 }
