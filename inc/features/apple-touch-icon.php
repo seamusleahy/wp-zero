@@ -2,8 +2,8 @@
 /**
  * Adds the links for the Apple Touch Icon.
  */
-add_action( 'wp_head', 'ZEROMTHEME_apple_touch_icon_wp_head' );
-function ZEROMTHEME_apple_touch_icon_wp_head( ) {
+add_action( 'wp_head', 'ZEROTHEME_apple_touch_icon_wp_head' );
+function ZEROTHEME_apple_touch_icon_wp_head( ) {
 	// the path to the images
 	$path = get_stylesheet_directory().'/img/';
 
@@ -49,6 +49,6 @@ function ZEROMTHEME_apple_touch_icon_wp_head( ) {
 
 	// output the icons
 	foreach ( $icons as $attrs ) {
-		echo '<link '.ZEROMTHEME_get_formatted_attributes( $attrs )."/>\n";
+		echo '<link '.ZEROTHEME_get_formatted_attributes( $attrs )."/>\n";
 	}
 }

@@ -2,7 +2,7 @@
 /**
  * Based on the load_template but it allows extra variables to be set.
  */
-function ZEROMTHEME_load_template( $_template_file,  $_vars = array(), $require_once = true ) {
+function ZEROTHEME_load_template( $_template_file,  $_vars = array(), $require_once = true ) {
 	global $posts, $post, $wp_did_header, $wp_did_template_redirect, $wp_query, $wp_rewrite, $wpdb, $wp_version, $wp, $id, $comment, $user_ID;
 	
 	if ( is_array( $wp_query->query_vars ) )
@@ -25,7 +25,7 @@ function ZEROMTHEME_load_template( $_template_file,  $_vars = array(), $require_
  * @param unknown_type $slug
  * @param unknown_type $name
  */
-function ZEROMTHEME_get_template_part( $slug, $name=null) {
+function ZEROTHEME_get_template_part( $slug, $name=null) {
 	do_action( "get_template_part_{$slug}", $slug, $name );
 	
 	$templates = array();

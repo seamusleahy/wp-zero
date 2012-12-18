@@ -5,7 +5,7 @@
  * @param unknown $text    string - the text to slugify
  * @param unknown $options array (optional) - force_lowercase, separated_character, accepted_characters
  */
-function ZEROMTHEME_slugify( $text, $options= array() ) {
+function ZEROTHEME_slugify( $text, $options= array() ) {
 	$options = array_merge( array(
 			'force_lowercase' => true,
 			'separated_character' => '-',
@@ -28,7 +28,7 @@ function ZEROMTHEME_slugify( $text, $options= array() ) {
  * @param unknown $attributes array - key value pair of attributes
  * @return string
  */
-function ZEROMTHEME_get_formatted_attributes( $attributes ) {
+function ZEROTHEME_get_formatted_attributes( $attributes ) {
 	if ( is_null( $attributes ) || count( $attributes )==0 ) {
 		return '';
 	}

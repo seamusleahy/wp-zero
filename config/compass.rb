@@ -27,4 +27,4 @@ relative_assets = true
 
 project_type = :stand_alone
 
-# add_import_path "../ZEROMTHEME/sass"
+# add_import_path "../ZEROTHEME/sass"

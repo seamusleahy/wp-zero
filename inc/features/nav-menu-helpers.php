@@ -8,7 +8,7 @@
  *
  * @param unknown $args - the same arguments you pass into wp_nav_menu (the fallback and output arguments do not apply)
  */
-function ZEROMTHEME_get_nav_menu( $args=array() ) {
+function ZEROTHEME_get_nav_menu( $args=array() ) {
 	$args = wp_parse_args( $args, array() );
 	$args = apply_filters( 'wp_nav_menu_args', $args );
 	$args = (object) $args;
@@ -53,7 +53,7 @@ function ZEROMTHEME_get_nav_menu( $args=array() ) {
 	}
 
 
-	$menu_tree = _ZEROMTHEME_get_nav_menu_walk( $sorted_menu_items, $parent_to_children, 0 );
+	$menu_tree = _ZEROTHEME_get_nav_menu_walk( $sorted_menu_items, $parent_to_children, 0 );
 
 	return $menu_tree;
 }
@@ -64,18 +64,18 @@ function ZEROMTHEME_get_nav_menu( $args=array() ) {
  *
  * @private
  *
- * The recursive callback for walking the menu for ZEROMTHEME_get_nav_menu_walk
+ * The recursive callback for walking the menu for ZEROTHEME_get_nav_menu_walk
  *
  * @param unknown_type $menu_items
  * @param unknown_type $parent_to_children
  * @param unknown_type $current_id
  */
-function _ZEROMTHEME_get_nav_menu_walk( &$menu_items, &$parent_to_children, $current_id ) {
+function _ZEROTHEME_get_nav_menu_walk( &$menu_items, &$parent_to_children, $current_id ) {
 	if ( isset( $parent_to_children[$current_id] ) ) {
 		$tree = $parent_to_children[$current_id];
 
 		foreach ( $tree as $item ) {
-			$item->children = _ZEROMTHEME_get_nav_menu_walk( $menu_items, $parent_to_children, $item->ID );
+			$item->children = _ZEROTHEME_get_nav_menu_walk( $menu_items, $parent_to_children, $item->ID );
 		}
 
 		return $tree;

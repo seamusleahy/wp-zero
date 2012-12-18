@@ -61,5 +61,5 @@
 <?php endwhile; // End the loop. ?>
 
 <?php // The pagination control?>
-<nav class="pager"><?php echo ZEROMTHEME_paginate_index_links(); ?></nav>
+<nav class="pager"><?php echo ZEROTHEME_paginate_index_links(); ?></nav>
 </div>

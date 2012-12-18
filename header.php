@@ -31,8 +31,8 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 	<meta http-equiv="cleartype" content="on">
 
-	<title><?php if(function_exists('ZEROMTHEME_wp_title')) {
-		ZEROMTHEME_wp_title(); 
+	<title><?php if(function_exists('ZEROTHEME_wp_title')) {
+		ZEROTHEME_wp_title(); 
 	} else {
 		wp_title( '|' );
 		bloginfo('name');

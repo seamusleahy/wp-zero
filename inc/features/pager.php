@@ -6,7 +6,7 @@
  *
  * @param unknown $args - the same as for paginate_list
  */
-function ZEROMTHEME_paginate_index_links( $args=array() ) {
+function ZEROTHEME_paginate_index_links( $args=array() ) {
 	// Taken from http://codex.wordpress.org/Function_Reference/paginate_links
 	global $wp_rewrite, $wp_query;
 	$wp_query->query_vars['paged'] > 1 ? $current = $wp_query->query_vars['paged'] : $current = 1;

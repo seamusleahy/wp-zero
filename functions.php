@@ -1,6 +1,6 @@
 <?php
 
-// Keep this to pull ZEROMTHEME features
+// Keep this to pull ZEROTHEME features
 require_once dirname( __FILE__ ).'/inc/bootstrap.php';
 
 define( 'ZEROTHEME_VERSION_NUMBER', '0.0.1' );

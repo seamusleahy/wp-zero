@@ -80,11 +80,11 @@ if ( is_singular() ) {
 
 // Then display the title for non-singular
 if ( !is_singular() ) {
-	ZEROMTHEME_get_template_part( 'title', $template_names );
+	ZEROTHEME_get_template_part( 'title', $template_names );
 }
 
 // Then we call the right loop
-ZEROMTHEME_get_template_part( 'loop', $template_names ); ?>
+ZEROTHEME_get_template_part( 'loop', $template_names ); ?>
 	</div><!-- #content -->
 
 

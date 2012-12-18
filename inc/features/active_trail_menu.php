@@ -1,6 +1,6 @@
 <?php
 
-class ZEROMTHEME_Active_Trail {
+class ZEROTHEME_Active_Trail {
 
 	/**
 	 * Returns a the active menu trail which is similar to a breadcrumb except
@@ -99,11 +99,11 @@ class ZEROMTHEME_Active_Trail {
 
 
 	/**
-	 * Returns a ZEROMTHEME_Active_Trail_Item for a post
+	 * Returns a ZEROTHEME_Active_Trail_Item for a post
 	 */
 	function _build_menu_item_from_post( $post_id ) {
 		$post = get_post( $post_id );
-		return new ZEROMTHEME_Active_Trail_Item(
+		return new ZEROTHEME_Active_Trail_Item(
 			apply_filters( 'single_post_title', $post->post_title, $post ),
 			get_permalink( $post->ID ),
 			$post->ID
@@ -113,7 +113,7 @@ class ZEROMTHEME_Active_Trail {
 
 
 	/**
-	 * Returns an array of ZEROMTHEME_Active_Trail_Items for the children
+	 * Returns an array of ZEROTHEME_Active_Trail_Items for the children
 	 */
 	function _build_children_menu_items_from_post( $post_id ) {
 		$posts = get_posts( array(
@@ -146,7 +146,7 @@ class ZEROMTHEME_Active_Trail {
  * An item in the active trail menu
  *
  */
-class ZEROMTHEME_Active_Trail_Item {
+class ZEROTHEME_Active_Trail_Item {
 
 	private $_title;
 	private $_url;
@@ -179,7 +179,7 @@ class ZEROMTHEME_Active_Trail_Item {
 	 *
 	 * @param unknown $id - menu ID
 	 *
-	 * @return ZEROMTHEME_Active_Trail_Item
+	 * @return ZEROTHEME_Active_Trail_Item
 	 */
 	function get_child( $id ) {
 		if ( ( is_string( $id ) || is_int( $id ) ) && array_key_exists( $id, $this->_children_ids ) ) {
@@ -192,7 +192,7 @@ class ZEROMTHEME_Active_Trail_Item {
 	/**
 	 * Set all the children
 	 *
-	 * @param unknown $children array - an array of ZEROMTHEME_Active_Trail_Item
+	 * @param unknown $children array - an array of ZEROTHEME_Active_Trail_Item
 	 */
 	function set_children( $children ) {
 		$this->_children = array();
@@ -207,7 +207,7 @@ class ZEROMTHEME_Active_Trail_Item {
 	/**
 	 * Get an array of the children
 	 *
-	 * @return array of ZEROMTHEME_Active_Trail_Item
+	 * @return array of ZEROTHEME_Active_Trail_Item
 	 */
 	function get_children( ) {
 		return $this->_children;
@@ -215,9 +215,9 @@ class ZEROMTHEME_Active_Trail_Item {
 
 
 	/**
-	 * Append a ZEROMTHEME_Active_Trail_Item to the end of the children
+	 * Append a ZEROTHEME_Active_Trail_Item to the end of the children
 	 *
-	 * @param unknown $child ZEROMTHEME_Active_Trail_Item
+	 * @param unknown $child ZEROTHEME_Active_Trail_Item
 	 */
 	function append_child( $child ) {
 		$this->_children[] = $child;
@@ -255,7 +255,7 @@ class ZEROMTHEME_Active_Trail_Item {
 
 	function as_link() {
 		$o = '<a href="'.$this->url.'"';
-		$o .= ZEROMTHEME_get_formatted_attributes( $this->attributes );
+		$o .= ZEROTHEME_get_formatted_attributes( $this->attributes );
 		$o .= '>'.$this->title.'</a>';
 		return $o;
 	}
@@ -268,11 +268,11 @@ class ZEROMTHEME_Active_Trail_Item {
 
 
 
-global $ZEROMTHEME_active_trail;
-$ZEROMTHEME_active_trail = new ZEROMTHEME_Active_Trail();
+global $ZEROTHEME_active_trail;
+$ZEROTHEME_active_trail = new ZEROTHEME_Active_Trail();
 
 
-function ZEROMTHEME_get_active_trail_menu( $args=array() ) {
-	global $ZEROMTHEME_active_trail;
-	return $ZEROMTHEME_active_trail->get_active_trail_menu( $args );
+function ZEROTHEME_get_active_trail_menu( $args=array() ) {
+	global $ZEROTHEME_active_trail;
+	return $ZEROTHEME_active_trail->get_active_trail_menu( $args );
 }

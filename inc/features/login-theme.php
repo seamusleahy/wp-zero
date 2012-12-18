@@ -6,8 +6,8 @@
 /**
  * Add CSS to customize the login page
  */
-add_action( 'login_head', 'ZEROMTHEME_login_theme_login_head' );
-function ZEROMTHEME_login_theme_login_head() {
+add_action( 'login_head', 'ZEROTHEME_login_theme_login_head' );
+function ZEROTHEME_login_theme_login_head() {
 	$styles = new WP_Styles();
 
 	// TODO: create a search order for file extensions for stylesheets
@@ -20,7 +20,7 @@ function ZEROMTHEME_login_theme_login_head() {
 		}
 
 
-	$styles = apply_filters( 'ZEROMTHEME_write_login_styles', $styles );
+	$styles = apply_filters( 'ZEROTHEME_write_login_styles', $styles );
 
 	$styles->do_items();
 }
@@ -30,8 +30,8 @@ function ZEROMTHEME_login_theme_login_head() {
 /**
  * Change the logo to link to the site's homepage instead of WordPress.org
  */
-add_filter( 'login_headerurl', 'ZEROMTHEME_login_theme_login_headerurl' );
-function ZEROMTHEME_login_theme_login_headerurl( $url ) {
+add_filter( 'login_headerurl', 'ZEROTHEME_login_theme_login_headerurl' );
+function ZEROTHEME_login_theme_login_headerurl( $url ) {
 	return home_url( '/' );
 }
 
@@ -40,7 +40,7 @@ function ZEROMTHEME_login_theme_login_headerurl( $url ) {
 /**
  * Change the text of the logo to be the site's name instead of WordPress
  */
-add_filter( 'login_headertitle', 'ZEROMTHEME_login_theme_login_headertitle' );
-function ZEROMTHEME_login_theme_login_headertitle( $url ) {
+add_filter( 'login_headertitle', 'ZEROTHEME_login_theme_login_headertitle' );
+function ZEROTHEME_login_theme_login_headertitle( $url ) {
 	return esc_attr( get_bloginfo( 'name' ) );
 }

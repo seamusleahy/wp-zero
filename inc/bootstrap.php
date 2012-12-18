@@ -102,7 +102,7 @@ function ZEROTHEME_load_features() {
 		// Adds css/login.less to the login screen and changes the WordPress logo to link to the homepage and read your name
 		'login-theme',
 
-		// Adds the function ZEROMTHEME_paginate_index_links() which wraps WP's paginate_links to work for index pages instead of just paginated posts
+		// Adds the function ZEROTHEME_paginate_index_links() which wraps WP's paginate_links to work for index pages instead of just paginated posts
 		'pager',
 
 		// Make the wp_page_menu function follow the args betters passed from wp_nav_menu

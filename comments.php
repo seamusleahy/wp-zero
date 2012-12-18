@@ -34,8 +34,8 @@
 
 					<?php
 	// The comment thread
-	// the ZEROMTHEME_Walker_Comment will call the comment.php template
-	wp_list_comments( array( 'walker' => new ZEROMTHEME_Walker_Comment(), 'element' => 'article',  ) );
+	// the ZEROTHEME_Walker_Comment will call the comment.php template
+	wp_list_comments( array( 'walker' => new ZEROTHEME_Walker_Comment(), 'element' => 'article',  ) );
 ?>
 
 		<?php // Comment navigation ?>

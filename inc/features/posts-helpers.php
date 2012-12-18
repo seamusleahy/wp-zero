@@ -8,7 +8,7 @@
  *
  * @param unknown $args
  */
-function ZEROMTHEME_find_post( $args ) {
+function ZEROTHEME_find_post( $args ) {
 	$query = new WP_Query();
 	$args = wp_parse_args( $args, array( 'post_type' => 'post' ) );
 	$args['numberposts'] = 1;
@@ -33,7 +33,7 @@ function ZEROMTHEME_find_post( $args ) {
  *
  * @return boolean - true if $post is a descendant of $ancestor, false otherwiser
  */
-function ZEROMTHEME_is_post_ancestor( $post, $ancestor ) {
+function ZEROTHEME_is_post_ancestor( $post, $ancestor ) {
 	if ( is_numeric( $post ) || is_object( $post ) ) {
 		$post = get_post( $post );
 	} else if ( is_string( $post ) || is_array( $post ) ) {
@@ -73,7 +73,7 @@ function ZEROMTHEME_is_post_ancestor( $post, $ancestor ) {
  *
  * @param unknown s string - pass as arguments the name of the post types to test against, if none, then it test if a post type is set in general
  */
-function ZEROMTHEME_is_post_type() {
+function ZEROTHEME_is_post_type() {
 	$types = func_get_args();
 	if ( empty( $types ) ) {
 		return get_post_type() !== false;

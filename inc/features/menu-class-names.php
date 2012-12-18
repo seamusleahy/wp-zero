@@ -3,9 +3,9 @@
 /**
  * Add better classes to the nav menu items
  */
-add_filter( 'nav_menu_css_class', 'ZEROMTHEME_nav_menu_css_class', 10, 2 );
-add_filter( 'page_css_class', 'ZEROMTHEME_nav_menu_css_class', 10, 2 );
-function ZEROMTHEME_nav_menu_css_class( $classes, $item ) {
+add_filter( 'nav_menu_css_class', 'ZEROTHEME_nav_menu_css_class', 10, 2 );
+add_filter( 'page_css_class', 'ZEROTHEME_nav_menu_css_class', 10, 2 );
+function ZEROTHEME_nav_menu_css_class( $classes, $item ) {
 	$title = '';
 	// Figure out which field has the title
 	if ( isset( $item->title ) ) {
@@ -15,7 +15,7 @@ function ZEROMTHEME_nav_menu_css_class( $classes, $item ) {
 	}
 
 	if ( !empty( $title ) ) {
-		$classes[] = ZEROMTHEME_slugify( $title );
+		$classes[] = ZEROTHEME_slugify( $title );
 	}
 
 	return $classes;

@@ -2,7 +2,7 @@
 /**
  * Allow for easy AJAX templates
  */
-function ZEROMTHEME_themeajax_print_settings() {
+function ZEROTHEME_themeajax_print_settings() {
 	echo '<script>';
 	echo 'window.themeSettings = ';
 	echo json_encode( array(
@@ -11,7 +11,7 @@ function ZEROMTHEME_themeajax_print_settings() {
 		) );
 	echo '</script>';
 }
-add_action( 'wp_print_scripts', 'ZEROMTHEME_themeajax_print_settings' );
+add_action( 'wp_print_scripts', 'ZEROTHEME_themeajax_print_settings' );
 
 /**
  * Set the content-type for the header
@@ -20,7 +20,7 @@ add_action( 'wp_print_scripts', 'ZEROMTHEME_themeajax_print_settings' );
  *
  * Accepted types: json, javascript, rss, text, xml, atom, css, html
  */
-function ZEROMTHEME_themeajax_set_type( $type ) {
+function ZEROTHEME_themeajax_set_type( $type ) {
 	$types = array(
 		'json' => 'application/json',
 		'javascript' => 'text/javascript',
@@ -40,7 +40,7 @@ function ZEROMTHEME_themeajax_set_type( $type ) {
 /**
  * A generic AJAX handler for the theme
  */
-function ZEROMTHEME_themeajax_handler() {
+function ZEROTHEME_themeajax_handler() {
 	$template = isset( $_REQUEST['template'] ) ? $_REQUEST['template'] : '';
 
 	if ( !empty( $template ) ) {
@@ -48,5 +48,5 @@ function ZEROMTHEME_themeajax_handler() {
 		die();
 	}
 }
-add_action( 'wp_ajax_themeajax', 'ZEROMTHEME_themeajax_handler' );
-add_action( 'wp_ajax_nopriv_themeajax', 'ZEROMTHEME_themeajax_handler' );
+add_action( 'wp_ajax_themeajax', 'ZEROTHEME_themeajax_handler' );
+add_action( 'wp_ajax_nopriv_themeajax', 'ZEROTHEME_themeajax_handler' );

@@ -1,7 +1,7 @@
 <?php
 
 
-class ZEROMTHEME_Walker_Comment extends Walker_Comment {
+class ZEROTHEME_Walker_Comment extends Walker_Comment {
 
 	/**
 	 *
@@ -17,7 +17,7 @@ class ZEROMTHEME_Walker_Comment extends Walker_Comment {
 		$GLOBALS['comment_depth'] = $depth + 1;
 
 		if ( !empty( $args['level_element'] ) ) {
-			echo '<'.$args['level_element'].' '.ZEROMTHEME_get_formatted_attributes( $args['level_element_attributes'] ).'>';
+			echo '<'.$args['level_element'].' '.ZEROTHEME_get_formatted_attributes( $args['level_element_attributes'] ).'>';
 		}
 	}
 
@@ -71,7 +71,7 @@ class ZEROMTHEME_Walker_Comment extends Walker_Comment {
 
 		$args['args'] = $args;
 		if ( $template = locate_template( array( 'comment-'.$comment->comment_type.'.php', 'comment.php' ), false ) ) {
-			ZEROMTHEME_load_template( $template, array_merge( $args, array( 'comment_depth' => $args['depth'] ) ), false );
+			ZEROTHEME_load_template( $template, array_merge( $args, array( 'comment_depth' => $args['depth'] ) ), false );
 		}
 
 	}

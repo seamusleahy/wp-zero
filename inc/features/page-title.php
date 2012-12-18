@@ -2,7 +2,7 @@
 /**
  * Generate better page titles
  */
-function ZEROMTHEME_wp_title( $separator = '|', $echo=true ) {
+function ZEROTHEME_wp_title( $separator = '|', $echo=true ) {
 	global $page, $paged;
 
 	// The various parts that can go in the title
@@ -31,9 +31,9 @@ function ZEROMTHEME_wp_title( $separator = '|', $echo=true ) {
 		$formatted_parts['page_num'] = sprintf( __( 'Page %s', 'ZEROTHEME' ), $page_num );
 	}
 
-	// Call filter ZEROMTHEME_wp_title for others to modify
+	// Call filter ZEROTHEME_wp_title for others to modify
 	$formatted = implode( ' '.$separator. ' ', $formatted_parts );
-	$formatted = apply_filters( 'ZEROMTHEME_wp_title', $formatted, $formatted_parts, $separator, $title, $page_num, $site_name, $site_description );
+	$formatted = apply_filters( 'ZEROTHEME_wp_title', $formatted, $formatted_parts, $separator, $title, $page_num, $site_name, $site_description );
 
 	if ( $echo ) {
 		echo $formatted;

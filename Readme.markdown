@@ -13,7 +13,7 @@ WP-ZERO is a starter theme that gives you:
 
 # Usage #
 
-1. Copy WP-ZEROMTHEME
+1. Copy WP-ZEROTHEME
 2. Rename the folder to your theme
 3. During development, set ```WP_DEBUG``` to ```true``` in your ```wp-config.php```
 3. Find the string ```ZEROTHEME``` and replace with your theme name across the files
@@ -58,7 +58,7 @@ can lead to display errors when ```wp_nav_menu``` defaults to ```wp_page_menu```
 The options 'container', 'container_id', and 'container_class' are added to ```wp_page_menu```.
 
 ### HTML5 comments ###
-The comment tree is generated with the HTML5 element of ```<article>``` with the help of the ```ZEROMTHEME_Walker_Comment``` walker class.
+The comment tree is generated with the HTML5 element of ```<article>``` with the help of the ```ZEROTHEME_Walker_Comment``` walker class.
 
 ### Header and footer templates ###
 You should not need to modify the footer.php or header.php templates because they only handle the doctype, head element, body element, and html element.
@@ -84,7 +84,7 @@ Adds WordPress' comment-reply script for moving the reply form below the comment
 
 
 ### Page titles ###
-Adds a function ZEROMTHEME_wp_title() with hook ZEROMTHEME_wp_title to remove page title logic from the header.php.
+Adds a function ZEROTHEME_wp_title() with hook ZEROTHEME_wp_title to remove page title logic from the header.php.
 
 ### Login customization ###
 Make your login page look like it is part of your site instead of WordPress. It will link the WordPress logo to your site - instead of wordpress.org - and change the tooltip text to your site name; additionally, it also includes ```css/login.css``` (```sass/login.scss```) to allow you to customize the styles.
@@ -94,7 +94,7 @@ Make your login page look like it is part of your site instead of WordPress. It 
 ## Helper functions ##
 
 ### Pagination for posts ###
-Add ```ZEROMTHEME_paginate_index_links``` function that wraps paginate_links to work to create pagers for index and archive pages.
+Add ```ZEROTHEME_paginate_index_links``` function that wraps paginate_links to work to create pagers for index and archive pages.
 
 ### Load templates while passing variables ###
 
@@ -102,7 +102,7 @@ It works like the WordPress core ```load_template``` function but this takes an 
 
 ```php
 <?php
-ZEROMTHEME_load_template( locate_template( 'custom-template.php' ),  array( 'foo' => 'The value for the $foo var in the template' ) );
+ZEROTHEME_load_template( locate_template( 'custom-template.php' ),  array( 'foo' => 'The value for the $foo var in the template' ) );
 ?>
 ```
 
@@ -113,7 +113,7 @@ It works like the WordPress core ```get_template_part``` function but this takes
 
 ```php
 <?php
-ZEROMTHEME_get_template_part( 'loop', array( 'single-event', 'event', 'single' ) );
+ZEROTHEME_get_template_part( 'loop', array( 'single-event', 'event', 'single' ) );
 ?>
 ```
 
@@ -124,7 +124,7 @@ ZEROMTHEME_get_template_part( 'loop', array( 'single-event', 'event', 'single' )
 
 ```php
 <?php
-$slug = ZEROMTHEME_slugify( 'Magazine Name' );
+$slug = ZEROTHEME_slugify( 'Magazine Name' );
 echo $slug;
 // magazine-name
 ?>
@@ -133,7 +133,7 @@ echo $slug;
 ### Format array as HTML attributes ###
 
 ```php
-<div <?php echo ZEROMTHEME_get_formatted_attributes( array( 'class' => array('first', 'push1', 'span3'), 'id' => 'album', 'data-name' => 'french' ) ); ?>>
+<div <?php echo ZEROTHEME_get_formatted_attributes( array( 'class' => array('first', 'push1', 'span3'), 'id' => 'album', 'data-name' => 'french' ) ); ?>>
 ```
 
 
@@ -141,7 +141,7 @@ echo $slug;
 
 # CSS Conventions #
 
-There aren't many CSS conventions that ZEROMTHEME uses, it keeps a very small footprint on your styles. But there is one
+There aren't many CSS conventions that ZEROTHEME uses, it keeps a very small footprint on your styles. But there is one
 to keep because it results in less work and better UX.
 
 Use the class name ```prose``` to mark the element that contains body content such as the content of a post, page, or comment.
