@@ -78,7 +78,7 @@ if ( file_exists( WP_CONTENT_DIR . '/themes/vip/plugins/vip-init.php' ) ) {
 require_once __DIR__ . '/includes/helpers.php';
 require_once __DIR__ . '/includes/template-loaders.php';
 
-add_action( 'after_setup_theme', 'rare_load_features' );
+add_action( 'after_setup_theme', 'ZEROTHEME_load_features' );
 function ZEROTHEME_load_features() {
 	$path = __DIR__ . '/features/';
 	;
