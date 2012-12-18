@@ -20,7 +20,7 @@
       <h1><?php the_title(); ?></h1>
 
       <?php // 3) Display the publish date of the post ?>
-      <time pubdate datetime="<?php echo get_the_date('c'); ?>"><?php
+      <time pubdate datetime="<?php echo date( 'c', (int) get_the_date( 'U' ) ); ?>"><?php
             printf( __('%1$s at %2$s'), get_the_date(),  get_the_time()) ?></time>
       
       <?php // 4) Display and link to the author ?>

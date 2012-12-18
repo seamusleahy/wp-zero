@@ -26,7 +26,7 @@
 			<h1><a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a></h1>
 
 			<?php // Publish date ?>
-			<time pubdate datetime="<?php echo get_the_date( 'c' ); ?>"><?php echo get_the_date(); ?> - <?php the_time(); ?></time>
+			<time pubdate datetime="<?php echo date( 'c', (int) get_the_date( 'U' ) ); ?>"><?php echo get_the_date(); ?> - <?php the_time(); ?></time>
 
 			<?php // The Author of the post ?>
 			<a href="<?php echo get_author_posts_url( get_the_author_meta( 'ID' ) ); ?>"><?php the_author(); ?></a>

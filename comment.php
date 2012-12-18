@@ -20,7 +20,7 @@
         <?php 
         // The comment publish date
         ?>
-        <time pubdate datetime="<?php echo get_comment_date('c'); ?>"><?php
+        <time pubdate datetime="<?php echo date( 'c', (int) get_comment_date( 'U' ) ); ?>"><?php
             printf( __('%1$s at %2$s'), get_comment_date(),  get_comment_time()) ?></time>
       </header>
       
