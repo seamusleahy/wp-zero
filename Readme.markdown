@@ -1,5 +1,5 @@
 
-WP-Zero is a starter theme that gives you:
+WP-ZERO is a starter theme that gives you:
 
 * minimal HTML and templates to start
 * full usage of HTML5
@@ -9,33 +9,38 @@ WP-Zero is a starter theme that gives you:
 * starter for themeing your login screen
 * helpers from pagination to slugify function
 * templates that are called via AJAX
+* and WP.com VIP ready 
 
 # Usage #
 
-1. Copy WP-Zero
+1. Copy WP-ZEROMTHEME
 2. Rename the folder to your theme
 3. During development, set ```WP_DEBUG``` to ```true``` in your ```wp-config.php```
 3. Find the string ```ZEROTHEME``` and replace with your theme name across the files
 4. Update the information in style.css
 5. Replace or delete the placeholder images for favicon, apple-touch-icon, and apple-start-up-image in the ```img/``` folder
 6. Replace the ```screenshot.png``` image to reflect your design
-7. Start themeing
+7. Review enabled features and VIP plugins in ```inc/bootstrap.php```
+8. Create custom taxonomies, post types, and field UIs in ```inc/taxonomies.php```, ```inc/post-types.php```, and ```inc/fields.php```.
+9. Review and change as needed the configuration in ```functions.php```
+10. Start themeing
 
 # Features #
 
 ## Magiclly add icons and startup image ##
 
 ### Favicon ###
-Simple place your favicon.ico in your sub-theme's image directory.
+Simple place your ```favicon.ico``` file in ```img/``` directory.
 
 ### Apple touch icon ###
-Simple place your icons in your theme's image directory and name them ```apple-touch-icon[-<X>x<Y>][-precomposed].png```. (Use the App icon template to assist: http://appicontemplate.com/)
+Simple place your icons in ```img/``` and name them ```apple-touch-icon[-<X>x<Y>][-precomposed].png```. (Use the App icon template to assist: http://appicontemplate.com/)
 
 ### Apple startup image ###
-
+Simple place your your startup image in ```img/``` directory and name them ```apple-touch-startup-image[-<X>x<Y>][-landscape][@2].png```.
 
 ## WYSIWYG styles ##
-By using the convention of using the prose class name to signal body-content, the WYSIWYG editor is automatically kept up-to-date in styles. It loads reset.less, editor.less, and prose.less into the WYSIWYG.
+By using the convention of using the prose class name to signal body-content, the WYSIWYG editor is automatically kept up-to-date in styles.
+This is because ```sass/objects/_prose.scss``` partial is included in both ```screen.scss``` and ```editor.scss```, and the ```prose``` class is added to the WYSIWYG editor for you. You may still want to tweak ```editor.scss``` for some overall base settings.
 
 
 ## Cleaner and better WordPress HTML ###
@@ -53,10 +58,11 @@ can lead to display errors when ```wp_nav_menu``` defaults to ```wp_page_menu```
 The options 'container', 'container_id', and 'container_class' are added to ```wp_page_menu```.
 
 ### HTML5 comments ###
-The comment tree is generated with the HTML5 element of ```<article>``` with the help of the ```Zero_Walker_Comment``` walker class.
+The comment tree is generated with the HTML5 element of ```<article>``` with the help of the ```ZEROMTHEME_Walker_Comment``` walker class.
 
 ### Header and footer templates ###
-You should not need to modify the footer.php or header.php templates because they only handle the doctype, head element, body element, and html element. 
+You should not need to modify the footer.php or header.php templates because they only handle the doctype, head element, body element, and html element.
+
 To modify the start and end of the page, you can edit the body-header.php and body-footer.php templates.
 
 
@@ -64,7 +70,12 @@ To modify the start and end of the page, you can edit the body-header.php and bo
 ## AJAX templates ##
 Easy template AJAX callback.
 
+1. Create a custom template in the ```ajax/<TEMPLATE_NAME>.php``` directory. You'll have access to all the default template stuff although there will not be any default loop context.
+2. You can make an AJAX call for the template as such:
 
+```javascript
+jQuery.get( themeSettings.ajaxUrl, {action: themeSettings.themeAjaxAction, template: 'TEMPLATE_NAME'}, function( data, textStatus ){}, 'html' );
+```
 
 ## Misc. ##
 
@@ -73,17 +84,17 @@ Adds WordPress' comment-reply script for moving the reply form below the comment
 
 
 ### Page titles ###
-Adds a function zero_wp_title() with hook zero_wp_title to remove page title logic from the header.php.
+Adds a function ZEROMTHEME_wp_title() with hook ZEROMTHEME_wp_title to remove page title logic from the header.php.
 
 ### Login customization ###
-Make your login page look like it is part of your site instead of WordPress. It will link the WordPress logo to your site - instead of wordpress.org - and change the tooltip text to your site name; additionally, it also includes ```css/login.css``` to allow you to customize the styles.
+Make your login page look like it is part of your site instead of WordPress. It will link the WordPress logo to your site - instead of wordpress.org - and change the tooltip text to your site name; additionally, it also includes ```css/login.css``` (```sass/login.scss```) to allow you to customize the styles.
 
 
 
 ## Helper functions ##
 
 ### Pagination for posts ###
-Add ```zero_paginate_index_links``` function that wraps paginate_links to work to create pagers for index and archive pages.
+Add ```ZEROMTHEME_paginate_index_links``` function that wraps paginate_links to work to create pagers for index and archive pages.
 
 ### Load templates while passing variables ###
 
@@ -91,7 +102,7 @@ It works like the WordPress core ```load_template``` function but this takes an 
 
 ```php
 <?php
-zero_load_template( locate_template( 'custom-template.php' ),  array( 'foo' => 'The value for the $foo var in the template' ) );
+ZEROMTHEME_load_template( locate_template( 'custom-template.php' ),  array( 'foo' => 'The value for the $foo var in the template' ) );
 ?>
 ```
 
@@ -102,7 +113,7 @@ It works like the WordPress core ```get_template_part``` function but this takes
 
 ```php
 <?php
-zero_get_template_part( 'loop', array( 'single-event', 'event', 'single' ) );
+ZEROMTHEME_get_template_part( 'loop', array( 'single-event', 'event', 'single' ) );
 ?>
 ```
 
@@ -113,7 +124,7 @@ zero_get_template_part( 'loop', array( 'single-event', 'event', 'single' ) );
 
 ```php
 <?php
-$slug = zero_slugify( 'Magazine Name' );
+$slug = ZEROMTHEME_slugify( 'Magazine Name' );
 echo $slug;
 // magazine-name
 ?>
@@ -122,7 +133,7 @@ echo $slug;
 ### Format array as HTML attributes ###
 
 ```php
-<div <?php echo zero_get_formatted_attributes( array( 'class' => array('first', 'push1', 'span3'), 'id' => 'album', 'data-name' => 'french' ) ); ?>>
+<div <?php echo ZEROMTHEME_get_formatted_attributes( array( 'class' => array('first', 'push1', 'span3'), 'id' => 'album', 'data-name' => 'french' ) ); ?>>
 ```
 
 
@@ -130,7 +141,7 @@ echo $slug;
 
 # CSS Conventions #
 
-There aren't many CSS conventions that Zero uses, it keeps a very small footprint on your styles. But there is one
+There aren't many CSS conventions that ZEROMTHEME uses, it keeps a very small footprint on your styles. But there is one
 to keep because it results in less work and better UX.
 
 Use the class name ```prose``` to mark the element that contains body content such as the content of a post, page, or comment.

@@ -2,7 +2,7 @@
  * Eric Meyer's Reset CSS v2.0 (http://meyerweb.com/eric/tools/css/reset/)
  * http://cssreset.com
  */
-/* line 17, ../sass/core/_reset.scss */
+/* line 17, /Users/Seamus/Sites/wordpress/wp-content/themes/wp-ZEROMTHEME/sass/core/_reset.scss */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -25,139 +25,139 @@ time, mark, audio, video {
 }
 
 /* HTML5 display-role reset for older browsers */
-/* line 27, ../sass/core/_reset.scss */
+/* line 27, /Users/Seamus/Sites/wordpress/wp-content/themes/wp-ZEROMTHEME/sass/core/_reset.scss */
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
   display: block;
 }
 
-/* line 30, ../sass/core/_reset.scss */
+/* line 30, /Users/Seamus/Sites/wordpress/wp-content/themes/wp-ZEROMTHEME/sass/core/_reset.scss */
 body {
   line-height: 1;
 }
 
-/* line 33, ../sass/core/_reset.scss */
+/* line 33, /Users/Seamus/Sites/wordpress/wp-content/themes/wp-ZEROMTHEME/sass/core/_reset.scss */
 ol, ul {
   list-style: none;
 }
 
-/* line 36, ../sass/core/_reset.scss */
+/* line 36, /Users/Seamus/Sites/wordpress/wp-content/themes/wp-ZEROMTHEME/sass/core/_reset.scss */
 blockquote, q {
   quotes: none;
 }
 
-/* line 40, ../sass/core/_reset.scss */
+/* line 40, /Users/Seamus/Sites/wordpress/wp-content/themes/wp-ZEROMTHEME/sass/core/_reset.scss */
 blockquote:before, blockquote:after,
 q:before, q:after {
   content: '';
   content: none;
 }
 
-/* line 44, ../sass/core/_reset.scss */
+/* line 44, /Users/Seamus/Sites/wordpress/wp-content/themes/wp-ZEROMTHEME/sass/core/_reset.scss */
 table {
   border-collapse: collapse;
   border-spacing: 0;
 }
 
-/* line 5, ../sass/core/_color.scss */
+/* line 5, /Users/Seamus/Sites/wordpress/wp-content/themes/wp-ZEROMTHEME/sass/core/_color.scss */
 body {
   color: white;
-  background-color: #222222;
+  background-color: #320031;
 }
 
-/* line 10, ../sass/core/_color.scss */
+/* line 10, /Users/Seamus/Sites/wordpress/wp-content/themes/wp-ZEROMTHEME/sass/core/_color.scss */
 a {
   color: #00bff3;
 }
 
-/* line 4, ../sass/core/_type.scss */
+/* line 4, /Users/Seamus/Sites/wordpress/wp-content/themes/wp-ZEROMTHEME/sass/core/_type.scss */
 body {
   font-family: "Arial", sans-serif;
   font-size: 16px;
 }
 
-/* line 1, ../sass/objects/_screenreader.scss */
+/* line 1, /Users/Seamus/Sites/wordpress/wp-content/themes/wp-ZEROMTHEME/sass/objects/_screenreader.scss */
 .screen-reader-text {
   position: absolute;
   display: block;
   left: -9999px;
 }
 
-/* line 2, ../sass/objects/_prose.scss */
+/* line 2, /Users/Seamus/Sites/wordpress/wp-content/themes/wp-ZEROMTHEME/sass/objects/_prose.scss */
 .prose p, .prose ol, .prose ul, .prose dl, .prose blockquote {
   margin: 1em 0;
 }
-/* line 6, ../sass/objects/_prose.scss */
+/* line 6, /Users/Seamus/Sites/wordpress/wp-content/themes/wp-ZEROMTHEME/sass/objects/_prose.scss */
 .prose ol, .prose ul {
   overflow: hidden;
 }
-/* line 9, ../sass/objects/_prose.scss */
+/* line 9, /Users/Seamus/Sites/wordpress/wp-content/themes/wp-ZEROMTHEME/sass/objects/_prose.scss */
 .prose ol li, .prose ul li {
   display: list-item;
   margin-left: 1.5em;
 }
-/* line 15, ../sass/objects/_prose.scss */
+/* line 15, /Users/Seamus/Sites/wordpress/wp-content/themes/wp-ZEROMTHEME/sass/objects/_prose.scss */
 .prose ul li {
   list-style-type: disc;
 }
-/* line 19, ../sass/objects/_prose.scss */
+/* line 19, /Users/Seamus/Sites/wordpress/wp-content/themes/wp-ZEROMTHEME/sass/objects/_prose.scss */
 .prose ol li {
   list-style-type: decimal;
 }
-/* line 23, ../sass/objects/_prose.scss */
+/* line 23, /Users/Seamus/Sites/wordpress/wp-content/themes/wp-ZEROMTHEME/sass/objects/_prose.scss */
 .prose strong {
   font-weight: bold;
 }
-/* line 27, ../sass/objects/_prose.scss */
+/* line 27, /Users/Seamus/Sites/wordpress/wp-content/themes/wp-ZEROMTHEME/sass/objects/_prose.scss */
 .prose em {
   font-style: italic;
 }
-/* line 34, ../sass/objects/_prose.scss */
+/* line 34, /Users/Seamus/Sites/wordpress/wp-content/themes/wp-ZEROMTHEME/sass/objects/_prose.scss */
 .prose .alignnone {
   margin: 5px 20px 20px 0;
 }
-/* line 39, ../sass/objects/_prose.scss */
+/* line 39, /Users/Seamus/Sites/wordpress/wp-content/themes/wp-ZEROMTHEME/sass/objects/_prose.scss */
 .prose .aligncenter,
 .prose div.aligncenter {
   display: block;
   margin: 5px auto 5px auto;
 }
-/* line 44, ../sass/objects/_prose.scss */
+/* line 44, /Users/Seamus/Sites/wordpress/wp-content/themes/wp-ZEROMTHEME/sass/objects/_prose.scss */
 .prose .alignright {
   float: right;
   margin: 5px 0 20px 20px;
 }
-/* line 49, ../sass/objects/_prose.scss */
+/* line 49, /Users/Seamus/Sites/wordpress/wp-content/themes/wp-ZEROMTHEME/sass/objects/_prose.scss */
 .prose .alignleft {
   float: left;
   margin: 5px 20px 20px 0;
 }
-/* line 54, ../sass/objects/_prose.scss */
+/* line 54, /Users/Seamus/Sites/wordpress/wp-content/themes/wp-ZEROMTHEME/sass/objects/_prose.scss */
 .prose .aligncenter {
   display: block;
   margin: 5px auto 5px auto;
 }
-/* line 59, ../sass/objects/_prose.scss */
+/* line 59, /Users/Seamus/Sites/wordpress/wp-content/themes/wp-ZEROMTHEME/sass/objects/_prose.scss */
 .prose a img.alignright {
   float: right;
   margin: 5px 0 20px 20px;
 }
-/* line 64, ../sass/objects/_prose.scss */
+/* line 64, /Users/Seamus/Sites/wordpress/wp-content/themes/wp-ZEROMTHEME/sass/objects/_prose.scss */
 .prose a img.alignnone {
   margin: 5px 20px 20px 0;
 }
-/* line 68, ../sass/objects/_prose.scss */
+/* line 68, /Users/Seamus/Sites/wordpress/wp-content/themes/wp-ZEROMTHEME/sass/objects/_prose.scss */
 .prose a img.alignleft {
   float: left;
   margin: 5px 20px 20px 0;
 }
-/* line 73, ../sass/objects/_prose.scss */
+/* line 73, /Users/Seamus/Sites/wordpress/wp-content/themes/wp-ZEROMTHEME/sass/objects/_prose.scss */
 .prose a img.aligncenter {
   display: block;
   margin-left: auto;
   margin-right: auto;
 }
-/* line 79, ../sass/objects/_prose.scss */
+/* line 79, /Users/Seamus/Sites/wordpress/wp-content/themes/wp-ZEROMTHEME/sass/objects/_prose.scss */
 .prose .wp-caption {
   background: #fff;
   border: 1px solid #f0f0f0;
@@ -166,19 +166,19 @@ body {
   padding: 5px 3px 10px;
   text-align: center;
 }
-/* line 87, ../sass/objects/_prose.scss */
+/* line 87, /Users/Seamus/Sites/wordpress/wp-content/themes/wp-ZEROMTHEME/sass/objects/_prose.scss */
 .prose .wp-caption.alignnone {
   margin: 5px 20px 20px 0;
 }
-/* line 91, ../sass/objects/_prose.scss */
+/* line 91, /Users/Seamus/Sites/wordpress/wp-content/themes/wp-ZEROMTHEME/sass/objects/_prose.scss */
 .prose .wp-caption.alignleft {
   margin: 5px 20px 20px 0;
 }
-/* line 95, ../sass/objects/_prose.scss */
+/* line 95, /Users/Seamus/Sites/wordpress/wp-content/themes/wp-ZEROMTHEME/sass/objects/_prose.scss */
 .prose .wp-caption.alignright {
   margin: 5px 0 20px 20px;
 }
-/* line 99, ../sass/objects/_prose.scss */
+/* line 99, /Users/Seamus/Sites/wordpress/wp-content/themes/wp-ZEROMTHEME/sass/objects/_prose.scss */
 .prose .wp-caption img {
   border: 0 none;
   height: auto;
@@ -187,7 +187,7 @@ body {
   padding: 0;
   width: auto;
 }
-/* line 108, ../sass/objects/_prose.scss */
+/* line 108, /Users/Seamus/Sites/wordpress/wp-content/themes/wp-ZEROMTHEME/sass/objects/_prose.scss */
 .prose .wp-caption p.wp-caption-text {
   font-size: 11px;
   line-height: 17px;

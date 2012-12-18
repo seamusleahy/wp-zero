@@ -1,3 +1,12 @@
+<?php
+/**
+ * The end of the page outout.
+ *
+ * @package WordPress
+ * @subpackage ZEROTHEME
+ */
+?>
+
 <?php get_template_part( 'body-footer' ); ?>
 <?php
 	/* Always have wp_footer() just before the closing </body>
