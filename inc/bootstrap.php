@@ -130,7 +130,7 @@ function ZEROTHEME_load_features() {
 		'posts-helpers',
 
 		// Easy Ajax callbacks
-		'ZEROMTHEME_themeajax',
+		'themeajax',
 	);
 
 	foreach ( $features as $feature ) {
