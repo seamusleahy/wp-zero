@@ -17,7 +17,8 @@ function ZEROTHEME_slugify( $text, $options= array() ) {
 	}
 
 	$text = preg_replace( '/[^'.str_replace( '/', '\/', $options['accepted_characters'] ).']+/', $options['separated_character'], $text );
-
+	$text = trim( $text, '-' );
+	
 	return $text;
 }
 
