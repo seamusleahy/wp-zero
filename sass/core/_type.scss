@@ -6,4 +6,5 @@ body {
     family: $font-family-text;
     size: $font-size-base;
   }
+  -webkit-font-smoothing: antialiased;
 }
