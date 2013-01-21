@@ -34,8 +34,9 @@
 	<title><?php if(function_exists('ZEROTHEME_wp_title')) {
 		ZEROTHEME_wp_title(); 
 	} else {
-		wp_title( '|' );
 		bloginfo('name');
+		wp_title( '|' );
+		
 	}?></title>
 
 	
