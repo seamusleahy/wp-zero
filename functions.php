@@ -82,7 +82,7 @@ add_action( 'wp_enqueue_scripts', 'ZEROTHEME_enqueue_scripts' );
 function ZEROTHEME_enqueue_scripts() {
 	// Don't load our scripts in the admin section
 	if ( !is_admin() ) {
-		wp_register_script( 'modernizr', get_template_directory_uri().'/js/vendor/modernizr.js', array(), '2.5.3' );
+		wp_register_script( 'modernizr', get_template_directory_uri().'/js/vendor/modernizr.js', array(), '2.6.2' );
 		wp_enqueue_script( 'modernizr' );
 
 		// wp_register_script( 'plugins', get_template_directory_uri().'/js/plugins.js', array('jquery'), ZEROTHEME_VERSION_NUMBER);
