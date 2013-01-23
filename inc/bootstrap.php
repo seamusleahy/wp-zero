@@ -131,6 +131,9 @@ function ZEROTHEME_load_features() {
 
 		// Easy Ajax callbacks
 		'themeajax',
+
+		// Add a menu item to the homepage on the menu admin screen
+		'homepage-menu-item',
 	);
 
 	foreach ( $features as $feature ) {
