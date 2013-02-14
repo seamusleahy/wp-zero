@@ -12,6 +12,11 @@ define( 'ZEROTHEME_VERSION_NUMBER', '0.0.1' );
 add_action( 'after_setup_theme', 'ZEROTHEME_setup' );
 function ZEROTHEME_setup() {
 
+	// Set the X-UA-Compatible for IE because the issue with the conditional comments and the meta element
+	if( !is_admin() ) {
+		header("X-UA-Compatible: IE=edge,chrome=1");
+	}
+
 	// Add default posts and comments RSS feed links to head
 	// add_theme_support( 'automatic-feed-links' );
 
