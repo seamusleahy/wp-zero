@@ -1,27 +1,4 @@
 <?php
-/**
- * Slugify a string
- *
- * @param unknown $text    string - the text to slugify
- * @param unknown $options array (optional) - force_lowercase, separated_character, accepted_characters
- */
-function ZEROTHEME_slugify( $text, $options= array() ) {
-	$options = array_merge( array(
-			'force_lowercase' => true,
-			'separated_character' => '-',
-			'accepted_characters' => '\w',
-		), $options );
-
-	if ( $options['force_lowercase'] ) {
-		$text = strtolower( $text );
-	}
-
-	$text = preg_replace( '/[^'.str_replace( '/', '\/', $options['accepted_characters'] ).']+/', $options['separated_character'], $text );
-	$text = trim( $text, '-' );
-	
-	return $text;
-}
-
 
 /**
  * Format an array of keyed values as HTML attributes.

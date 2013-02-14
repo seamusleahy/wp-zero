@@ -15,7 +15,7 @@ function ZEROTHEME_nav_menu_css_class( $classes, $item ) {
 	}
 
 	if ( !empty( $title ) ) {
-		$classes[] = ZEROTHEME_slugify( $title );
+		$classes[] = sanitize_html_class( sanitize_title_with_dashes( $title ) );
 	}
 
 	return $classes;

@@ -117,18 +117,6 @@ ZEROTHEME_get_template_part( 'loop', array( 'single-event', 'event', 'single' ) 
 ?>
 ```
 
-### Slugify text ###
-
-1. ```$text``` string - the text to slugify
-2. ```$options``` optional array - ```force_lowercase``` boolean to lowercase the text (defaults to ```true```), ```separated_character``` is a string to separate words (defaults to ```'-'```), ```accepted_characters``` is the regex to match words (defaults to ```'\w'```)
-
-```php
-<?php
-$slug = ZEROTHEME_slugify( 'Magazine Name' );
-echo $slug;
-// magazine-name
-?>
-```
 
 ### Format array as HTML attributes ###
 
@@ -150,6 +138,13 @@ The second issue is it makes it simple for keeping the WYSIWYG styles matching t
 class is added to the root of the WYSIWYG editor.
 
 Place all the prose styles in ```sass/object/_prose.scss```. The ```prose```
+
+
+# Good to know WP functions #
+* ```[sanitize_html_class()](http://codex.wordpress.org/Function_Reference/sanitize_html_class)```: Strips out anything not a letter, digit, underscore, or dash
+* ```[sanitize_title_with_dashes()](http://codex.wordpress.org/Function_Reference/sanitize_title_with_dashes)```: lowercases the text and adds dashes for the spaces
+* ```[sanitize_title()](http://codex.wordpress.org/Function_Reference/sanitize_title)```: Use for when adding a title into a URL
+
 
 
 
