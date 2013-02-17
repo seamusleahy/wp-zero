@@ -44,6 +44,7 @@ function ZEROTHEME_themeajax_handler() {
 	$template = isset( $_REQUEST['template'] ) ? $_REQUEST['template'] : '';
 
 	if ( !empty( $template ) ) {
+		$template = preg_replace("[^\w\s\d\-_~,;:\[\]\(\]]|[\.]{2,}", '', $template );
 		locate_template( array( 'ajax/'.$template.'.php' ), true );
 		die();
 	}
