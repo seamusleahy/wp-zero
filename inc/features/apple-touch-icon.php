@@ -1,6 +1,8 @@
 <?php
 /**
  * Adds the links for the Apple Touch Icon.
+ * 
+ * If for theme on WP.COM, remove this file and use Blavatar instead.
  */
 add_action( 'wp_head', 'ZEROTHEME_apple_touch_icon_wp_head' );
 function ZEROTHEME_apple_touch_icon_wp_head( ) {
