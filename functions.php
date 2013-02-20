@@ -86,17 +86,15 @@ function ZEROTHEME_enqueue_styles() {
 add_action( 'wp_enqueue_scripts', 'ZEROTHEME_enqueue_scripts' );
 function ZEROTHEME_enqueue_scripts() {
 	// Don't load our scripts in the admin section
-	if ( !is_admin() ) {
-		wp_register_script( 'modernizr', get_template_directory_uri().'/js/vendor/modernizr.js', array(), '2.6.2' );
-		wp_enqueue_script( 'modernizr' );
+	wp_register_script( 'modernizr', get_template_directory_uri().'/js/vendor/modernizr.js', array(), '2.6.2' );
+	wp_enqueue_script( 'modernizr' );
 
-		// wp_register_script( 'plugins', get_template_directory_uri().'/js/plugins.js', array('jquery'), ZEROTHEME_VERSION_NUMBER);
-		// wp_enqueue_script( 'plugins' );
+	// wp_register_script( 'plugins', get_template_directory_uri().'/js/plugins.js', array('jquery'), ZEROTHEME_VERSION_NUMBER);
+	// wp_enqueue_script( 'plugins' );
 
-		// The custom script kickoff for your theme. It is placed in the footer, remove the `true` parameter to place in head.
-		wp_register_script( 'script', get_template_directory_uri().'/js/script.js', array( 'jquery' ), ZEROTHEME_VERSION_NUMBER, true );
-		wp_enqueue_script( 'script' );
-	}
+	// The custom script kickoff for your theme. It is placed in the footer, remove the `true` parameter to place in head.
+	wp_register_script( 'script', get_template_directory_uri().'/js/script.js', array( 'jquery' ), ZEROTHEME_VERSION_NUMBER, true );
+	wp_enqueue_script( 'script' );
 }
 
 
