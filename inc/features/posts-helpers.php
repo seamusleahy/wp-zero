@@ -37,33 +37,13 @@ function ZEROTHEME_find_post( $args ) {
  * @return boolean - true if $post is a descendant of $ancestor, false otherwiser
  */
 function ZEROTHEME_is_post_ancestor( $post, $ancestor ) {
-	if ( is_numeric( $post ) || is_object( $post ) ) {
-		$post = get_post( $post );
-	} else if ( is_string( $post ) || is_array( $post ) ) {
-			$post = get_post( $post );
-		} else {
-		return false;
-	}
+	$ids = get_post_ancestors( $post );
+	$ancestor = get_post( $ancestor );
 
-	if ( is_numeric( $ancestor ) || is_object( $ancestor ) ) {
-		$ancestor = get_post( $ancestor );
-	} else if ( is_string( $ancestor ) || is_array( $ancestor ) ) {
-			$ancestor = get_post( $ancestor );
-		} else {
-		return false;
-	}
-
-	if ( $post == false || $ancestor = false ) {
-		return false;
-	}
-
-
-	while ( $post->post_parent ) {
-		if ( $post->post_parent == $ancestor->ID ) {
+	foreach( $ids as $id ) {
+		if( $ancestor->ID == $id ) {
 			return true;
 		}
-
-		$post = get_post( $post->post_parent );
 	}
 
 	return false;
