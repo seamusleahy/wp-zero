@@ -93,9 +93,11 @@ function ZEROTHEME_load_features() {
 		// Provided better class names on the menu items
 		'menu-class-names',
 
+		// If on WordPress.com, use Blavatar instead and remove favicon feature.
 		// Auto-linking images/favicon.ico as the favicon
 		'favicon',
-
+		
+		// If on WordPress.com, use Blavatar instead and remove apple-touch-icon feature.
 		// Auto-link images/apple-touch-icon[-<X>x<Y>][-precomposed].png as the Apple touch icons
 		'apple-touch-icon',
 
