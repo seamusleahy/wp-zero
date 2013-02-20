@@ -11,7 +11,10 @@
 function ZEROTHEME_find_post( $args ) {
 	$query = new WP_Query();
 	$args = wp_parse_args( $args, array( 'post_type' => 'post' ) );
-	$args['numberposts'] = 1;
+	$args['posts_per_page'] = 1;
+	$args['no_found_rows'] = true;
+	$args['update_term_cache'] = false;
+	$args['update_post_cache'] = false;
 
 	$posts = $query->query( $args );
 
