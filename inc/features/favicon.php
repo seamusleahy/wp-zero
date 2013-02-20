@@ -9,6 +9,6 @@ add_action( 'wp_head', 'ZEROTHEME_favicon_wp_head' );
 function ZEROTHEME_favicon_wp_head( ) {
 	// Favicon and Apple Touch Icon
 	if ( file_exists( get_stylesheet_directory().'/img/favicon.ico' ) ) {
-		echo '<link rel="shortcut icon" href="'.get_bloginfo( 'stylesheet_directory' ).'/img/favicon.ico">';
+		echo '<link rel="shortcut icon" href="'.get_stylesheet_directory_uri().'/img/favicon.ico">'."\n";
 	}
 }
