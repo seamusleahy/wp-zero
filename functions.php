@@ -52,8 +52,8 @@ function ZEROTHEME_setup() {
 	add_theme_support( 'menus' );
 	register_nav_menus( array(
 			'primary' => __( 'Primary Navigation', 'ZEROTHEME' )
-			//, 'footer' => __('Footer Navigation'), 'ZEROTHEME' )
-			//, 'utility' => __('Utility Navigation'), 'ZEROTHEME')
+			//, 'footer' => __('Footer Navigation', 'ZEROTHEME' )
+			//, 'utility' => __('Utility Navigation', 'ZEROTHEME')
 		) );
 }
 
