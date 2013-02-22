@@ -12,11 +12,6 @@ define( 'ZEROTHEME_VERSION_NUMBER', '0.0.1' );
 add_action( 'after_setup_theme', 'ZEROTHEME_setup' );
 function ZEROTHEME_setup() {
 
-	// Set the X-UA-Compatible for IE because the issue with the conditional comments and the meta element
-	if( !is_admin() ) {
-		header("X-UA-Compatible: IE=edge,chrome=1");
-	}
-
 	// Add default posts and comments RSS feed links to head
 	// add_theme_support( 'automatic-feed-links' );
 
@@ -55,6 +50,15 @@ function ZEROTHEME_setup() {
 			//, 'footer' => __('Footer Navigation', 'ZEROTHEME' )
 			//, 'utility' => __('Utility Navigation', 'ZEROTHEME')
 		) );
+}
+
+
+/**
+ * Send the X-UA-Compatible for IE to use the latest
+ */
+add_action( 'send_headers', 'ZEROTHEME_add_header_xua' );
+function ZEROTHEME_add_header_xua() {
+	header( 'X-UA-Compatible: IE=edge,chrome=1' );
 }
 
 
