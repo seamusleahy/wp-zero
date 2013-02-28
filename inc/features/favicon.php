@@ -13,7 +13,7 @@ function ZEROTHEME_favicon_wp_head( ) {
 	if ( false === $icon || ( defined( 'WP_DEBUG' ) && WP_DEBUG ) ) {
 		// Favicon output
 		if ( file_exists( get_stylesheet_directory().'/img/favicon.ico' ) ) {
-			echo '<link rel="shortcut icon" href="'.get_stylesheet_directory_uri().'/img/favicon.ico">'."\n";
+			echo '<link rel="shortcut icon" href="'.get_stylesheet_directory_uri().'/img/favicon.ico" />'."\n";
 			
 			// Set cache
 			wp_cache_set( 'favicon', $icons, 'ZEROTHEME' );
