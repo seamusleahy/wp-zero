@@ -40,17 +40,15 @@ function ZEROTHEME_apple_touch_icon_wp_head( ) {
 
 				// Push
 				$icons[] = $attrs;
+
+				// output the icon
+				echo '<link '.ZEROTHEME_get_formatted_attributes( $attrs )."/>\n";
 			}
 		}
 
 		if ( count( $icons ) > 0 ) {
 			// Save to cache
 			wp_cache_set( 'apple-touch-icons', $icons, 'ZEROTHEME' );
-
-			// output the icons
-			foreach ( $icons as $attrs ) {
-				echo '<link '.ZEROTHEME_get_formatted_attributes( $attrs )."/>\n";
-			}
 		}
 	}
 }
