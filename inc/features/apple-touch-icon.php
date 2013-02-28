@@ -14,7 +14,7 @@ function ZEROTHEME_apple_touch_icon_wp_head( ) {
 	$icons = wp_cache_get( 'apple-touch-icons', 'ZEROTHEME' );
 
 	// If not cached or in debug mode, then go ahead of load them up
-	if ( $icons === false || ( defined( 'WP_DEBUG' ) && WP_DEBUG ) ) {
+	if ( false === $icons || ( defined( 'WP_DEBUG' ) && WP_DEBUG ) ) {
 		$icons = array();
 
 		// Get all the Apple Touch Icons files
