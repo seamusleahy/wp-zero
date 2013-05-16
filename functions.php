@@ -100,10 +100,15 @@ function ZEROTHEME_enqueue_scripts() {
 
 
 /**
- * Custom elements in the head for iPhone and iPad configuration.
+ * Custom elements in the head for various browser configurations.
  */
 add_action( 'wp_head', 'ZEROTHEME_head' );
 function ZEROTHEME_head() {
+	?>
+	<meta http-equiv="cleartype" content="on">
+	<meta http-equiv="imagetoolbar" content="false">
+	<?php
+	
 	// http://justinavery.me/blog/developing-ipad-web-application/
 ?>
 
