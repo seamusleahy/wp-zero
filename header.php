@@ -30,6 +30,7 @@
 	<meta charset="<?php bloginfo( 'charset' ); ?>" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 	<meta http-equiv="cleartype" content="on">
+	<meta http-equiv="imagetoolbar" content="false">
 
 	<title><?php if(function_exists('ZEROTHEME_wp_title')) {
 		ZEROTHEME_wp_title(); 
