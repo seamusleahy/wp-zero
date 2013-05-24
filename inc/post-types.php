@@ -61,6 +61,13 @@ register_post_type( 'CUSTOM-TYPE',
 
 		// Create a custom icon for the admin menu <http://kremalicious.com/wp-icons-template/>
 		'menu_icon' => get_bloginfo( 'stylesheet_directory' ).'/img/admin/icon-CUSTOM-TYPE.png'
+		
+		'rewrite' => array(
+			'slug' => 'CUSTOM-TYPES',
+			'with_front' => false,
+		),
+
+		'has_archive' => true, // Create an archive page
 	)
 );
 */
