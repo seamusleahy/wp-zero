@@ -126,6 +126,9 @@ function ZEROTHEME_load_features() {
 		// Add the nav element to acceptable elements for the menu
 		'nav-menu-container',
 
+		// Add extra arguments to wp_nav_menu
+		'wp-nav-menu',
+
 		// Give you helper functions to work with posts
 		'posts-helpers',
 
