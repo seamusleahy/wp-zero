@@ -153,6 +153,9 @@ function ZEROTHEME_register_custom_data_structure() {
 	require_once __DIR__ . '/fields.php';
 }
 
+// Customize the rewrite rules
+require_once __DIR__ . '/rewrite.php';
+
 // Load up theme customization settings
 require_once __DIR__ . '/theme-customizer.php';
 
