@@ -153,5 +153,8 @@ function ZEROTHEME_register_custom_data_structure() {
 	require_once __DIR__ . '/fields.php';
 }
 
+// Load up theme customization settings
+require_once __DIR__ . '/theme-customizer.php';
+
 // Load up global user configurable settings
 require_once __DIR__ . '/cheezcap-config.php';
