@@ -60,6 +60,7 @@ register_post_type( 'CUSTOM-TYPE',
 
 
 		// Create a custom icon for the admin menu <http://kremalicious.com/wp-icons-template/>
+		// Or use premade http://randyjensenonline.com/thoughts/wordpress-custom-post-type-fugue-icons/
 		'menu_icon' => get_bloginfo( 'stylesheet_directory' ).'/img/admin/icon-CUSTOM-TYPE.png'
 		
 		'rewrite' => array(
