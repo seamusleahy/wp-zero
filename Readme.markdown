@@ -1,4 +1,3 @@
-
 WP-ZERO is a starter theme that gives you:
 
 * minimal HTML and templates to start
@@ -126,16 +125,6 @@ ZEROTHEME_load_template( locate_template( 'custom-template.php' ),  array( 'foo'
 ```
 
 
-### Load a template part with multiple specialized names  ###
-
-It works like the WordPress core ```get_template_part``` function but this takes an array for the ```$name``` parameter.
-
-```php
-<?php
-ZEROTHEME_get_template_part( 'loop', array( 'single-event', 'event', 'single' ) );
-?>
-```
-
 
 ### Format array as HTML attributes ###
 
@@ -163,7 +152,7 @@ Place all the prose styles in ```sass/object/_prose.scss```. The ```prose```
 * ```[sanitize_html_class()](http://codex.wordpress.org/Function_Reference/sanitize_html_class)```: Strips out anything not a letter, digit, underscore, or dash
 * ```[sanitize_title_with_dashes()](http://codex.wordpress.org/Function_Reference/sanitize_title_with_dashes)```: lowercases the text and adds dashes for the spaces
 * ```[sanitize_title()](http://codex.wordpress.org/Function_Reference/sanitize_title)```: Use for when adding a title into a URL
-
+* ```[get_query_template()](http://codex.wordpress.org/Function_Reference/get_query_template)```: Attempt to load multiple templates
 
 
 
