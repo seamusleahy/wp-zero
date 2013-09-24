@@ -15,27 +15,3 @@ function ZEROTHEME_load_template( $_template_file,  $_vars = array(), $require_o
 	else
 		require( $_template_file );
 }
-
-
-
-
-/**
- * Similar to the WordPress get_template_part but $name can accept an array
- * 
- * @param unknown_type $slug
- * @param unknown_type $name
- */
-function ZEROTHEME_get_template_part( $slug, $name=null) {
-	do_action( "get_template_part_{$slug}", $slug, $name );
-	
-	$templates = array();
-	
-	$names = (array) $name;
-	foreach($names as $name) {
-		$templates[] = $slug . '-' . $name . '.php';
-	}
-	
-	$templates[] = $slug . '.php';
-	
-	return locate_template($templates, true, false);
-}
