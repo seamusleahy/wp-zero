@@ -41,6 +41,42 @@ Simple place your your startup image in ```img/``` directory and name them ```ap
 By using the convention of using the prose class name to signal body-content, the WYSIWYG editor is automatically kept up-to-date in styles.
 This is because ```sass/objects/_prose.scss``` partial is included in both ```screen.scss``` and ```editor.scss```, and the ```prose``` class is added to the WYSIWYG editor for you. You may still want to tweak ```editor.scss``` for some overall base settings.
 
+## WYSIWYG styles drop-down from annotated comments ##
+By using annotated comments before a selector in ```objects/_prose.scss```, style formats will be generated for your use.
+
+```css
+.prose {
+	
+	/**
+	 * @formatTitle Highlight
+	 *
+	 * Wraps selected text in a <span class="highlight">...</span>
+	 */
+	.highlight {
+		background-color: yellow;
+	}
+
+	/**
+	 * @formatTitle Pulled Quote
+	 *
+	 * Switches current block of text to <aside class="pulled-quote">...</aside>
+	 */
+	aside.pulled-quote {
+		...
+	}
+
+	table {
+		/**
+		 * @formatTitle Metrics Table
+		 *
+		 * Will add the class `metrics` only to a table element
+		 */
+		&.metrics {
+
+		}
+	}
+}
+```
 
 ## Cleaner and better WordPress HTML ###
 

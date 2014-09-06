@@ -1,6 +1,6 @@
 <?php
 /**
- * Sets up the WYSIWYG editor to use the prose.less stylesheet so you
+ * Sets up the WYSIWYG editor to use the objects/_prose.scss stylesheet so you
  * don't have to duplicate work.
  */
 

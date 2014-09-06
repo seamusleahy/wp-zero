@@ -85,8 +85,14 @@ function ZEROTHEME_load_features() {
 	;
 
 	$features = array(
-		// Configures the WYSIWYG editor to add .prose class to content
-		'css-editor',
+		// Configures the WYSIWYG editor to add .prose class to content and import the custom editor stylesheet
+		'editor-css',
+
+		// Provides the a filter hook 'ZEROTHEME_editor_style_formats' to register TinyMCE style formats. If there are style formats, then the style format is automatically added.
+		'editor-style-formats',
+
+		// Generate style formats from annotated comments in the `scss/objects/_prose.scss` file
+		'editor-annotated-scss-style-formats',
 
 		// Use the thread comments script to move the comment field below where replying
 		'thread-comments-script',
