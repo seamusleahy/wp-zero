@@ -1,3 +1,6 @@
+# ARCHIVED
+**This is from many years ago (seven years at the time of archiving) when I did WordPress development.**
+
 WP-ZERO is a starter theme that gives you:
 
 * minimal HTML and templates to start
